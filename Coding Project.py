@@ -7,8 +7,10 @@ Created on Thu Dec 29 20:34:16 2022
 
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
 array = np.loadtxt("inputdata6.csv", delimiter=",", skiprows=1)
 rainfall = np.array(array[:, 0]).reshape((-1, 1))
 productivity = np.array(array[:, 1])
 plt.scatter(rainfall, productivity)
+model = LinearRegression().fit(rainfall, productivity)
