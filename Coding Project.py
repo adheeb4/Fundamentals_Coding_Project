@@ -23,7 +23,8 @@ def plot(x, y, m, b):
     plt.figure()
     plt.scatter(x, y)
     plt.plot(x, m*x+b, color="orange")
-    plt.title("Correlation between Rainfall and Productivity", size=18, pad=45)
+    plt.title("Correlation between Rainfall and Productivity", size=16,
+              pad=45, fontweight="bold")
     plt.text(20, 0.22, "Predicted Value \nFor X = 245, Y = {:f}"
              .format(float(prediction)), fontsize=12, color="purple")
     plt.xlabel("Rainfall Precipitation (in mm per year)", size=12)
